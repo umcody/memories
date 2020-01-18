@@ -1,0 +1,92 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    padding:0;
+    margin:0;
+    /*background: radial-gradient(circle,#B5B1B1 2px,#FFFFFF);
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5b1b1+0,f9f4f4+53,ffffff+100 */
+background: #b5b1b1; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #b5b1b1 0%, #f9f4f4 53%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #b5b1b1 0%,#f9f4f4 53%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #b5b1b1 0%,#f9f4f4 53%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5b1b1', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.signInContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    background-color: #FFFFFF;
+    width:450px;
+    min-height: 300px;
+    max-height: 100%;
+    box-shadow: rgba(0,0,0,0.5) 0px 5px 10px;
+    padding: 20px 30px;
+    overflow-y: auto;
+}
+
+.column form{
+    display:flex;
+    flex-direction: column;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"]{
+    font-size: 12px;
+    margin: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #090C08;
+    border:none;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.column .logo{
+    width:125px;
+}
+
+.column form input[type="submit"]{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #F76816;
+    color: #FFFFFF;
+    border:none;
+    height:37px;
+    width:70px;
+    margin-top:15px;
+    margin-bottom:20px;
+    box-shadow: rgba(0,0,0,0.2) 0px 2px 4px;
+}
+
+.column .header{
+    padding: 20px 0;
+    padding-bottom: 30px;
+}
+
+.column .signInMessage{
+    text-decoration: none; 
+    font-size: 12px;
+    font-weight: 400px;
+    color:#333;
+    opacity: 0.75;
+}
+
+.column .header h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin:0;
+    padding-top: 16px;
+}
+.column .header span{
+    font-size:14px;
+    color: #333;
+}
