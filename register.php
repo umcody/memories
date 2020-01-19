@@ -14,8 +14,7 @@ $account = new Account($con);
         $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
         $password2 = FormSanitizer::sanitizeFormPassword($_POST["password2"]);
 
-        $account->validateFirstName($firstname);
-
+        $account->register($firstname,$lastname,$username,$email,$email2,$password,$password2);
     }
 
 
@@ -36,20 +35,27 @@ $account = new Account($con);
                 </div>
                 <form method = "POST">
 
-                    <?php echo $account->getError(Constants::$firstNameCharacters);  ?>
                     <input type = "text"name = "firstname" placeholder = "First Name" required>
+                    <?php echo $account->getError(Constants::$firstNameCharacters);?>
 
                     <input type = "text"name = "lastname" placeholder = "Last Name" required>
+                    <?php echo $account->getError(Constants::$lastNameCharacters);?>
 
                     <input type = "text"name = "username" placeholder = "Username" required>
+                    <?php echo $account->getError(Constants::$userNameCharacters);?>
 
                     <input type = "email"name = "email" placeholder = "E-mail" required>
+                    <?php echo $account->getError(Constants::$emailCharacters);  
+                        echo $account->getError(Constants::$emailTaken);  ?>
 
                     <input type = "email"name = "email2" placeholder = "Confirm E-mail" required>
+                    <?php echo $account->getError(Constants::$emailsDontMatch); ?>
 
                     <input type = "password"name = "password" placeholder = "Password" required>
+                    <?php echo $account->getError(Constants::$passwordCharacters); ?>
 
                     <input type = "password"name = "password2" placeholder = "Confirm Password" required>
+                    <?php echo $account->getError(Constants::$validatePasswords); ?>
 
                     <input type = "submit"name = "submitButton" value = "SUBMIT">
 
